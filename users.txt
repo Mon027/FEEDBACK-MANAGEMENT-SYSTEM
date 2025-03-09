@@ -1,0 +1,3 @@
+admin admin123 admin
+customer 1234 customer
+customer1 12345 customer

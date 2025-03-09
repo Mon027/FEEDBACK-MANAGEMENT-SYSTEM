@@ -48,7 +48,11 @@
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
+<<<<<<< HEAD
     /* Highlight urgent feedback rows */
+=======
+   
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     .urgent {
       background-color: #ffe5e5 !important;
       border-color: #ff0000;
@@ -109,13 +113,21 @@
         </tr>
       </thead>
       <tbody id="feedbackTableBody">
+<<<<<<< HEAD
         <!-- Feedback rows will be injected here -->
+=======
+       
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
       </tbody>
     </table>
   </div>
 
   <script>
+<<<<<<< HEAD
     // Sample data for demonstration.
+=======
+
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     let feedbackData = [
       { id: 1, name: "Jane Smith", email: "jane.smith@email.com",
         message: "The headset keeps disconnecting. Bad experience!",
@@ -128,11 +140,16 @@
         date: "2025-02-07", status: "In Progress", urgent: true }
     ];
 
+<<<<<<< HEAD
     // Function to populate the table with feedback data.
+=======
+   
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     function populateTable() {
       const tbody = document.getElementById("feedbackTableBody");
       tbody.innerHTML = "";
       feedbackData.forEach(feedback => {
+<<<<<<< HEAD
         // Create a table row.
         const row = document.createElement("tr");
         // If feedback is urgent, add a special class.
@@ -140,6 +157,15 @@
           row.classList.add("urgent");
         }
         // Build row inner HTML.
+=======
+     
+        const row = document.createElement("tr");
+      
+        if (feedback.urgent) {
+          row.classList.add("urgent");
+        }
+       
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
         row.innerHTML = `
           <td>${feedback.id}</td>
           <td>${feedback.name}</td>
@@ -158,9 +184,15 @@
       });
     }
 
+<<<<<<< HEAD
     // Function to update the status of a feedback record.
     function updateStatus(id) {
       // For demo: toggle between "New", "In Progress", and "Resolved".
+=======
+    
+    function updateStatus(id) {
+      
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
       feedbackData = feedbackData.map(feedback => {
         if (feedback.id === id) {
           if (feedback.status === "New") {
@@ -176,7 +208,11 @@
       populateTable();
     }
 
+<<<<<<< HEAD
     // Function to resolve a feedback record.
+=======
+    
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     function resolveFeedback(id) {
       feedbackData = feedbackData.map(feedback => {
         if (feedback.id === id) {
@@ -187,13 +223,21 @@
       populateTable();
     }
 
+<<<<<<< HEAD
     // Function to delete a feedback record.
+=======
+
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     function deleteFeedback(id) {
       feedbackData = feedbackData.filter(feedback => feedback.id !== id);
       populateTable();
     }
 
+<<<<<<< HEAD
     // Initialize the table when the page loads.
+=======
+    
+>>>>>>> b02ae5091d2facb0b7d452cd1ddd8b77c632a15b
     window.onload = populateTable;
   </script>
 </body>
