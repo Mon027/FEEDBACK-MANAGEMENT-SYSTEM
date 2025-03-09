@@ -1,0 +1,2 @@
+customer|ABCDEFGH|0|0
+customer1|Hello! This is URGENT. Please Help.|0|1
