@@ -48,7 +48,7 @@
     tr:nth-child(even) {
       background-color: #f9f9f9;
     }
-    /* Highlight urgent feedback rows */
+   
     .urgent {
       background-color: #ffe5e5 !important;
       border-color: #ff0000;
@@ -109,13 +109,13 @@
         </tr>
       </thead>
       <tbody id="feedbackTableBody">
-        <!-- Feedback rows will be injected here -->
+       
       </tbody>
     </table>
   </div>
 
   <script>
-    // Sample data for demonstration.
+
     let feedbackData = [
       { id: 1, name: "Jane Smith", email: "jane.smith@email.com",
         message: "The headset keeps disconnecting. Bad experience!",
@@ -128,18 +128,18 @@
         date: "2025-02-07", status: "In Progress", urgent: true }
     ];
 
-    // Function to populate the table with feedback data.
+   
     function populateTable() {
       const tbody = document.getElementById("feedbackTableBody");
       tbody.innerHTML = "";
       feedbackData.forEach(feedback => {
-        // Create a table row.
+     
         const row = document.createElement("tr");
-        // If feedback is urgent, add a special class.
+      
         if (feedback.urgent) {
           row.classList.add("urgent");
         }
-        // Build row inner HTML.
+       
         row.innerHTML = `
           <td>${feedback.id}</td>
           <td>${feedback.name}</td>
@@ -158,9 +158,9 @@
       });
     }
 
-    // Function to update the status of a feedback record.
+    
     function updateStatus(id) {
-      // For demo: toggle between "New", "In Progress", and "Resolved".
+      
       feedbackData = feedbackData.map(feedback => {
         if (feedback.id === id) {
           if (feedback.status === "New") {
@@ -176,7 +176,7 @@
       populateTable();
     }
 
-    // Function to resolve a feedback record.
+    
     function resolveFeedback(id) {
       feedbackData = feedbackData.map(feedback => {
         if (feedback.id === id) {
@@ -187,13 +187,13 @@
       populateTable();
     }
 
-    // Function to delete a feedback record.
+
     function deleteFeedback(id) {
       feedbackData = feedbackData.filter(feedback => feedback.id !== id);
       populateTable();
     }
 
-    // Initialize the table when the page loads.
+    
     window.onload = populateTable;
   </script>
 </body>
